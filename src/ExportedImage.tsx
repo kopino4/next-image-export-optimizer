@@ -177,7 +177,7 @@ export default function (props: ExportedImageProps) {
   const height = (isStaticImage && props.height) || (props.src as any).height;
 
   return isStaticImage ? (
-    <div style={isStaticImage ? { aspectRatio: width / height } : {}}>
+    <div style={isStaticImage ? { aspectRatio: (width / height).toString() } : {}}>
       <DynamicExportedImage {...props} />
     </div>
   ) : (
